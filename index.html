@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Breathing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="/index.mjs" defer></script>
+  </head>
+
+  <body>
+    <audio id="inhale" src="/inhale.wav"></audio>
+    <audio id="exhale" src="/exhale.wav"></audio>
+
+    <div>
+      <label for="inhale-duration">Inhale Duration (s)</label>
+      <input
+        id="inhale-duration"
+        type="number"
+        class="control"
+        min="1"
+        value="8"
+      />
+    </div>
+
+    <div>
+      <label for="exhale-duration">Exhale Duration (s)</label>
+      <input
+        id="exhale-duration"
+        type="number"
+        class="control"
+        min="1"
+        value="10"
+      />
+    </div>
+
+    <div><button id="playback" class="control">Play</button></div>
+  </body>
+</html>
