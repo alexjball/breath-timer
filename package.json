@@ -1,10 +1,12 @@
 {
-  "name": "timer",
+  "name": "breath-timer",
   "version": "1.0.0",
-  "description": "breathing timer",
-  "main": "index.js",
+  "description": "breath timer",
+  "homepage": "alexjball.com/breath-timer",
+  "repository": "github:alexjball/breath-timer",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "live-server"
   },
   "author": "Alex Ball",
   "license": "MIT",
