@@ -2,12 +2,14 @@
   <head>
     <title>Breath Timer</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./favicon.ico" />
     <script type="module" src="./index.mjs" defer></script>
   </head>
 
   <body>
     <audio id="inhale" src="./inhale.wav"></audio>
     <audio id="exhale" src="./exhale.wav"></audio>
+    <audio id="hold" src="./hold.wav"></audio>
 
     <div>
       <label for="inhale-duration">Inhale Duration (s)</label>
@@ -16,7 +18,18 @@
         type="number"
         class="control"
         min="1"
-        value="8"
+        value="6"
+      />
+    </div>
+
+    <div>
+      <label for="hold-top-duration">Hold Duration (s)</label>
+      <input
+        id="hold-top-duration"
+        type="number"
+        class="control"
+        min="0"
+        value="0"
       />
     </div>
 
@@ -27,7 +40,18 @@
         type="number"
         class="control"
         min="1"
-        value="10"
+        value="6"
+      />
+    </div>
+
+    <div>
+      <label for="hold-bottom-duration">Hold Duration (s)</label>
+      <input
+        id="hold-bottom-duration"
+        type="number"
+        class="control"
+        min="0"
+        value="4"
       />
     </div>
 

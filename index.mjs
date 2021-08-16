@@ -10,6 +10,11 @@ class Segment {
   }
 
   run(then) {
+    if (this.duration === 0) {
+      then();
+      return;
+    }
+
     this.audioElement.play();
 
     this.timeout = setTimeout(() => {
@@ -32,9 +37,19 @@ const segments = [
     audioElement: document.getElementById("inhale"),
   }),
   new Segment({
+    name: "Hold Top",
+    durationInput: document.getElementById("hold-top-duration"),
+    audioElement: document.getElementById("hold"),
+  }),
+  new Segment({
     name: "Exhale",
     durationInput: document.getElementById("exhale-duration"),
     audioElement: document.getElementById("exhale"),
+  }),
+  new Segment({
+    name: "Hold Bottom",
+    durationInput: document.getElementById("hold-bottom-duration"),
+    audioElement: document.getElementById("hold"),
   }),
 ];
 
